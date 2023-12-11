@@ -23,15 +23,10 @@ class RemoteControlCar
         return false;
     }
 
-    public int DistanceDriven()
-    {
-        return _distanceDriven;
-    }
+    public int DistanceDriven() => _distanceDriven;
 
-    public int DrainBattery()
-    {
-        return _batteryLevel - _batteryDrain;
-    }
+    public int DrainBattery() => _batteryLevel - _batteryDrain;
+
 
     public void Drive()
     {
@@ -43,10 +38,8 @@ class RemoteControlCar
         }
     }
 
-    public static RemoteControlCar Nitro()
-    {
-        return new RemoteControlCar(50, 4);
-    }
+    public static RemoteControlCar Nitro() => new RemoteControlCar(50, 4);
+
 }
 
 class RaceTrack
