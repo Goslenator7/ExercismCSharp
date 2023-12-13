@@ -2,10 +2,8 @@ using System;
 
 static class Appointment
 {
-    public static DateTime Schedule(string appointmentDateDescription)
-    {
-        return DateTime.Parse(appointmentDateDescription);
-    }
+    public static DateTime Schedule(string appointmentDateDescription) => DateTime.Parse(appointmentDateDescription);
+    
 
     public static bool HasPassed(DateTime appointmentDate)
     {
@@ -25,13 +23,8 @@ static class Appointment
     return false;
     }
 
-    public static string Description(DateTime appointmentDate)
-    {
-        return $"You have an appointment on {appointmentDate.ToString()}.";
-    }
+    public static string Description(DateTime appointmentDate) => $"You have an appointment on {appointmentDate.ToString()}.";
 
-    public static DateTime AnniversaryDate()
-    {
-        return new DateTime(DateTime.Now.Year, 9, 15);
-    }
+    public static DateTime AnniversaryDate() => new DateTime(DateTime.Now.Year, 9, 15);
+
 }
