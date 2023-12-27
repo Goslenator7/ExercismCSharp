@@ -21,10 +21,7 @@ public static class Languages
         return languages;
     }
 
-    public static int CountLanguages(List<string> languages)
-    {
-        return languages.Count;
-    }
+    public static int CountLanguages(List<string> languages) => languages.Count;
 
     public static bool HasLanguage(List<string> languages, string language)
     {
