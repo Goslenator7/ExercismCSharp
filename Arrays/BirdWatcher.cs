@@ -15,10 +15,7 @@ class BirdCount
         return countLastWeek;
     }
 
-    public int Today()
-    {
-        return birdsPerDay[birdsPerDay.Length - 1];
-    }
+    public int Today() => birdsPerDay[birdsPerDay.Length - 1];
 
     public void IncrementTodaysCount()
     {
