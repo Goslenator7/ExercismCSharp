@@ -11,10 +11,7 @@ abstract class Character
 
     public abstract int DamagePoints(Character target);
 
-    public virtual bool Vulnerable()
-    {
-        return false;
-    }
+    public virtual bool Vulnerable() => false;
 
     public abstract string ToString();
 }
@@ -34,10 +31,7 @@ class Warrior : Character
         return 6;
     }
 
-    public override string ToString()
-    {
-        return $"Character is a {characterType}";
-    }
+    public override string ToString() => $"Character is a {characterType}";
 }
 
 class Wizard : Character
@@ -62,17 +56,7 @@ class Wizard : Character
         spellPrepared = true;
     }
 
-    public override bool Vulnerable()
-    {
-        if (spellPrepared == false)
-        {
-            return true;
-        }
-        return false;
-    }
+    public override bool Vulnerable() => spellPrepared ? false : true;
 
-    public override string ToString()
-    {
-        return $"Character is a {characterType}";
-    }
+    public override string ToString() => $"Character is a {characterType}";
 }
