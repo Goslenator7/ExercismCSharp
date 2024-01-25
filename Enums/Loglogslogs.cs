@@ -18,7 +18,6 @@ static class LogLine
     {
         int logStart = logLine.IndexOf('[');
         string log = logLine.Substring(logStart + 1, logStart + 3);
-        Console.WriteLine(log);
 
         switch (log)
         {
@@ -46,8 +45,6 @@ static class LogLine
         
     }
 
-    public static string OutputForShortLog(LogLevel logLevel, string message)
-    {
-        return $"{(int)logLevel}:{message}";
-    }
+    public static string OutputForShortLog(LogLevel logLevel, string message) => $"{(int)logLevel}:{message}";
+
 }
